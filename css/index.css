@@ -1,0 +1,185 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Libre Baskerville', serif;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(to bottom, #f4e4bc, #d2b48c);
+  background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"grain\" width=\"100\" height=\"100\" patternUnits=\"userSpaceOnUse\"><circle cx=\"20\" cy=\"20\" r=\"1\" fill=\"%23ddd\" opacity=\"0.3\"/></pattern></svg>#f4e4bc');
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  background: linear-gradient(to right, #8b4513, #a0522d);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* Main content */
+main {
+  padding: 2rem 0;
+}
+
+section {
+  margin-bottom: 3rem;
+  background: rgba(255,255,255,0.8);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #8b4513;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #d2b48c;
+  padding-bottom: 0.5rem;
+}
+
+/* Accordion/Timeline */
+.accordion {
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.accordion-header {
+  background: #a0522d;
+  color: white;
+  padding: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.accordion-header:hover {
+  background: #8b4513;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.accordion-content.open {
+  max-height: 500px; /* Adjust as needed */
+  padding: 1rem;
+  background: #f9f9f9;
+}
+
+.timeline-item {
+  display: flex;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: white;
+  border-left: 4px solid #d2b48c;
+}
+
+.timeline-date {
+  font-weight: bold;
+  color: #8b4513;
+  min-width: 100px;
+}
+
+/* Grid for cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+  background: #8b4513;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+
+footer a {
+  color: #f4e4bc;
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  nav ul {
+    flex-direction: column;
+  }
+  
+  .container {
+    padding: 10px;
+  }
+  
+  section {
+    padding: 1rem;
+  }
+}
+
+/* Custom font demo - to change font: edit font-family */
+.font-demo {
+  font-family: 'Georgia', serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-style: italic;
+}
